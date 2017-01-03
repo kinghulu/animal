@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动物总动员</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery.3.0.min.js"></script>
+    <script src="js/swiper.min.js?v3"></script>
+    <script src="js/resLoader.js"></script>
+    <!--[if lte IE 8]><script src="js/html5.js"></script><![endif]-->
+</head>
+<body>
+<!--分享图片，如果已经调用分享接口请删除-->
+<div style="display: none;"><img src="images/shareimg.jpg"> </div>
+
+<!---加载页面--->
+<div class="page-box reloadbg"  id="loadingModal">
+    <!--进度条-->
+    <div class="progress">
+        <div class="progressbar"></div>
+        <div class="progresstext">
+            <span class="current">0</span>/
+            <span class="total">0</span>
+        </div>
+    </div>
+</div>
+
+<!---guide模块-->
+<div class="page-box" id="guideModal" style="display: none">
+    <div class="swiper-container pages-guide-swiper" id="guideSwiperBox">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-guide page-box guide-page1 animate">
+                <div class="p1-box fullbg" style="background-image:url(images/guide/guide-1.jpg)">
+                    <div class="p1-info"><img src="images/guide/guide-p1-info.png"></div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-guide page-box guide-monkey">
+                <div class="fullbg guide-monkey-simle" style="background-image:url(images/guide/guide-2.jpg)">
+                    <div class="guide-monkey-box"><img src="images/animal/monkey-big-smile.png"> </div>
+                </div>
+                <div class="fullbg guide-monkey-sad" style="background-image:url(images/guide/guide-2-2.jpg)">
+                    <div class="guide-monkey-box"><img src="images/animal/monkey-big-sad.png"> </div>
+                    <div class="guide-monkey-line" style="background-image:url(images/guide/guide-monkey-line.png)"></div>
+                </div>
+                <div class="guide-title"><img src="images/guide/guide-2-title.png"> </div>
+                <div class="guide-info"><img src="images/guide/guide-2-info.png"> </div>
+            </div>
+            <div class="swiper-slide swiper-slide-guide page-box">
+                <div class="fullbg guide-tiger-simle" style="background-image:url(images/guide/guide-3-1.jpg)"></div>
+                <div class="fullbg guide-tiger-sad" style="background-image:url(images/guide/guide-3-2.jpg)"></div>
+                <div class="guide-title"><img src="images/guide/guide-3-title.png"> </div>
+                <div class="guide-info"><img src="images/guide/guide-3-info.png"> </div>
+            </div>
+            <div class="swiper-slide swiper-slide-guide page-box">
+                <div class="fullbg guide-tiger-simle guide-ant-simle" style="background-image:url(images/guide/guide-4-1.jpg)"></div>
+                <div class="fullbg guide-tiger-sad guide-ant-sad" style="background-image:url(images/guide/guide-4-2.jpg)"></div>
+                <div class="guide-title"><img src="images/guide/guide-4-title.png"> </div>
+                <div class="guide-info"><img src="images/guide/guide-4-info.png"> </div>
+            </div>
+            <div class="swiper-slide swiper-slide-guide page-box">
+                <div class="fullbg guide-switch" style="background-image:url(images/guide/guide-5-1.jpg)"></div>
+                <div class="guide-title p5-s-title"><img src="images/guide/guide-5-title.png"> </div>
+                <!--<div class="p5-switch">-->
+                    <!--<div class="p5-switch-btn"></div>-->
+                <!--</div>-->
+            </div>
+            <div class="swiper-slide swiper-slide-guide page-box">
+                <div class="fullbg  guide-p6-box" style="background-image:url(images/guide/guide-5-1.jpg)">
+                    <div class="guide-p6-text"><img src="images/guide/guide-6-info.png"></div>
+                    <div class="guide-p6-instro"><img src="images/guide/guide-6-instro.png"></div>
+                </div>
+
+                <div class="guide-p6-btn" id="tryit">扶我起来试试</div>
+            </div>
+        </div>
+        <div class="p-arrup"></div>
+    </div>
+</div>
+
+<!---做题模块-->
+<div class="page-box " id="topicModal" style="display: none;">
+    <div class="swiper-container pages-topic-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle1">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t1-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/monkey-big-sad.png"> </div>
+                        <div class="btn topic-next-btn" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle2">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t2-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/hound-big.png"> </div>
+                        <div class="btn topic-next-btn"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle3">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t3-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/leopard-big.png"> </div>
+                        <div class="btn topic-next-btn" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle4">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t4-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/whale-big.png"> </div>
+                        <div class="btn topic-next-btn" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle5">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t5-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/butterfly-big.png"> </div>
+                        <div class="btn topic-next-btn" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle6">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t6-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/ant-small.png"> </div>
+                        <div class="btn topic-next-btn" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle7">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t7-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/bee-big.png"> </div>
+                        <div class="btn topic-next-btn" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic">
+                <div class="fullbg  topicStyle8">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t8-title.png"></div>
+                        <div class="topic-list">
+                            <ul>
+                                <li>
+                                    <div class="topic-item">我会为追求团队的利益而做出个人牺牲。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">在工作中，我总是能轻松应对各种人际关系。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我会努力成为某项专业技能的大牛大咖无敌手。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                                <li>
+                                    <div class="topic-item">我喜欢在不同的项目中挑战和体验不同的工作内容。</div>
+                                    <div class="linebg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/mantis.png"> </div>
+                        <div class="btn topic-next-btn"><img src="images/nextTopic.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="goNext"><img src="images/nextTopic.png"> </div>
+                        <div class="topic-tips">“最重要的”请向左划动，“最不重要的”请向右滑动。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-topic swiper-slide-question">
+                <div class="fullbg  topicStyle9">
+                    <div class="fullbg topic-tmbg">
+                        <div class="topic-title"><img src="images/topic/t9-title.png"></div>
+                        <div class="topic-question">
+                            <ul>
+                                <li>
+                                    <div class="question-title"><img src="images/topic/t9-s1.png"></div>
+                                    <div class="question-select">
+                                        <label>
+                                            <select>
+                                                <option>男</option>
+                                                <option>女</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question-title"><img src="images/topic/t9-s2.png"></div>
+                                    <div class="question-select">
+                                        <select>
+                                            <option>30岁以下</option>
+                                            <option>30岁以上</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question-title"><img src="images/topic/t9-s3.png"></div>
+                                    <div class="question-select">
+                                        <select>
+                                            <option>农、林、牧、渔业</option>
+                                            <option>IT</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question-title"><img src="images/topic/t9-s4.png"></div>
+                                    <div class="question-select">
+                                        <select>
+                                            <option>魔羯座</option>
+                                            <option>天秤座</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-bottom">
+                        <div class="topic-animal"><img src="images/animal/mantis.png"> </div>
+                        <div class="btn topic-next-btn"><img src="images/viewResult.png"> </div>
+                        <div class="btn topic-next-btn topic-next-btn-top" data-type="viewResult"><img src="images/viewResult.png"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="topicTags" class="topic-tag">
+        <div class="topic-tag-img"><img src="images/topic-tips.gif"></div>
+        <div class="btn btnline topicTipsKnowBtn"><img src="images/answerBtn.png"> </div>
+    </div>
+</div>
+
+<!---结果模块-->
+<div class="page-box resultBox" id="resultModal" style="display: none;">
+        <!--<div class="fullbg topicStyle1" style="display:none">-->
+            <!--<div class="answer-youare"><img src="images/topic/t1-type.png"> </div>-->
+            <!--<div class="answer-result">-->
+                <!--<div class="answer-animal"><img src="images/animal/monkey-big-sad.png"> </div>-->
+                <!--<div class="answer-text-box answer-info">-->
+                    <!--<img src="images/topic/t1-result.png">-->
+                <!--</div>-->
+                <!--<button class="btn btn-answer-suggest" id="viewSuggestBtn"><img src="images/answer-suggest.png"> </button>-->
+            <!--</div>-->
+            <!--<div class="answer-sugget-btnbox">-->
+                <!--<button class="btn btn-sugget" id="redoBtn"><img src="images/answer-redoBtn.png"> </button>-->
+                <!--<button class="btn btn-sugget" id="shareBtn"><img src="images/answer-share.png"> </button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <div class="fullbg topicStyle2">
+        <div class="answer-youare"><img src="images/topic/t2-type.png"> </div>
+        <div class="answer-result">
+            <div class="answer-animal"><img src="images/animal/hound-big.png"> </div>
+            <div class="answer-text-box answer-info">
+                <img src="images/topic/t1-result.png">
+            </div>
+            <button class="btn btn-answer-suggest" data-act="viewSuggest"><img src="images/answer-suggest.png"> </button>
+        </div>
+        <div class="answer-sugget-btnbox">
+            <button class="btn btn-sugget" id="redoBtn"><img src="images/answer-redoBtn.png"> </button>
+            <button class="btn btn-sugget" id="shareBtn"><img src="images/answer-share.png"> </button>
+        </div>
+        <!--查看建议-->
+        <div class="suggBox" id="suggBox" style="display: none">
+            <div class="sugg-ico"><img src="images/topic/t2-tips-ico.png"> </div>
+            <div class="sugg-tip"><img src="images/topic/t1-tips-text.png"> </div>
+            <button class="btn btn-answer-suggest" data-act="viewOther"><img src="images/answer-other-btn.png"> </button>
+            <button class="btn btn-sugg-close" id="suggCloseBtn"><img src="images/topic-close.png"> </button>
+        </div>
+    </div>
+
+    <!--<div class="fullbg topicStyle9">-->
+        <!--<div class="answer-youare"><img src="images/topic/t9-type.png"> </div>-->
+        <!--<div class="answer-result">-->
+            <!--<div class="answer-animal"><img src="images/animal/deer-big.png"> </div>-->
+            <!--<div class="answer-text-box answer-info">-->
+                <!--<img src="images/topic/t1-result.png">-->
+            <!--</div>-->
+            <!--<button class="btn btn-answer-suggest" data-act="viewOther"><img src="images/answer-other-btn.png"> </button>-->
+        <!--</div>-->
+        <!--<div class="answer-sugget-btnbox">-->
+            <!--<button class="btn btn-sugget" id="redoBtn"><img src="images/answer-redoBtn.png"> </button>-->
+            <!--<button class="btn btn-sugget" id="shareBtn"><img src="images/answer-share.png"> </button>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</div>
+
+<!---偷窥模块-->
+<div class="page-box" id="viewModal" style="display: none;">
+    <div class="swiper-container pages-viewother-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle1">
+                    <div class="answer-youare"><img src="images/topic/t1-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/monkey-big-sad.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t1-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle2">
+                    <div class="answer-youare"><img src="images/topic/t2-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/hound-big.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t2-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle3">
+                    <div class="answer-youare"><img src="images/topic/t3-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/leopard-big.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t3-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle4">
+                    <div class="answer-youare"><img src="images/topic/t4-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/whale-big.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t4-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle5">
+                    <div class="answer-youare"><img src="images/topic/t5-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/butterfly-big.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t5-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle6">
+                    <div class="answer-youare"><img src="images/topic/t6-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/ant-big.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t6-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle7">
+                    <div class="answer-youare"><img src="images/topic/t7-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/bee-big.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t7-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-viewother">
+                <div class="fullbg topicStyle8">
+                    <div class="answer-youare"><img src="images/topic/t8-type-it.png"> </div>
+                    <div class="answer-result">
+                        <div class="answer-animal"><img src="images/animal/mantis.png"> </div>
+                        <div class="answer-text-box answer-info">
+                            <img src="images/topic/t8-result.png">
+                        </div>
+                        <button class="btn btn-answer-suggest" data-act="goBack"><img src="images/btn-back.png"> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-btn-next swiper-btn-white"></div>
+        <div class="swiper-btn-prev swiper-btn-white"></div>
+    </div>
+</div>
+
+<!--背景音乐-->
+<div id="audio_btn" class="off rotate" style="display: block;">
+    <audio loop="" src="audio/bensound.mp3" id="myMusic" autoplay="" preload="auto"></audio>
+</div>
+
+<!--分享提示-->
+<div id="shareTips" class="share-tips" style="display: none;">
+    <img src="images/share-tips.png" class="share-tips-img">
+</div>
+
+<script>
+
+
+    //题目样式配置
+    var topicData={
+            "result1":{"name":"红色猴子","youarepic":"t1-type.png","namepic":"t1-type-it.png","tipspic":"t1-tips-ico.png","mess":"t1-result.png","info":"t1-tips-text.png","btncolor":"#a2363f","bodybg":"topic-1-bg.jpg","bgcolor":"#92aca1","topic_p":"monkey-big-sad.png","result_p":"monkey-big-sad.png"},
+            "result2":{"name":"黑色猎犬","youarepic":"t2-type.png","namepic":"t2-type-it.png","tipspic":"t2-tips-ico.png","mess":"t2-result.png","info":"t2-tips-text.png","btncolor":"#1a1210","bodybg":"topic-2-bg.jpg","bgcolor":"#394a61","topic_p":"hound-big.png","result_p":"hound-big.png"},
+            "result3":{"name":"橙色豹子","youarepic":"t3-type.png","namepic":"t3-type-it.png","tipspic":"t3-tips-ico.png","mess":"t3-result.png","info":"t3-tips-text.png","btncolor":"#bc8322","bodybg":"topic-3-bg.jpg","bgcolor":"#d67224","topic_p":"leopard-big.png","result_p":"leopard-big.png"},
+            "result4":{"name":"蓝色鲸鱼","youarepic":"t4-type.png","namepic":"t4-type-it.png","tipspic":"t4-tips-ico.png","mess":"t4-result.png","info":"t4-tips-text.png","btncolor":"#3456a5","bodybg":"topic-4-bg.jpg","bgcolor":"#4ab2ba","topic_p":"whale-big.png","result_p":"whale-big.png"},
+            "result5":{"name":"紫色蝴蝶","youarepic":"t5-type.png","namepic":"t5-type-it.png","tipspic":"t5-tips-ico.png","mess":"t5-result.png","info":"t5-tips-text.png","btncolor":"#4a3791","bodybg":"topic-5-bg.jpg","bgcolor":"#000000","topic_p":"butterfly-big.png","result_p":"butterfly-big.png"},
+            "result6":{"name":"棕色蚂蚁","youarepic":"t6-type.png","namepic":"t6-type-it.png","tipspic":"t6-tips-ico.png","mess":"t6-result.png","info":"t6-tips-text.png","btncolor":"#694940","bodybg":"topic-6-bg.jpg","bgcolor":"#9a9309","topic_p":"ant-big.png","result_p":"ant-small.png"},
+            "result7":{"name":"黄色蜜蜂","youarepic":"t7-type.png","namepic":"t7-type-it.png","tipspic":"t7-tips-ico.png","mess":"t7-result.png","info":"t7-tips-text.png","btncolor":"#b8ae15","bodybg":"topic-7-bg.jpg","bgcolor":"#9a9309","topic_p":"bee-big.png","result_p":"bee-big.png"},
+            "result8":{"name":"绿色螳螂","youarepic":"t8-type.png","namepic":"t8-type-it.png","tipspic":"t8-tips-ico.png","mess":"t8-result.png","info":"t8-tips-text.png","btncolor":"#437536","bodybg":"topic-8-2-bg.jpg","bgcolor":"#d4e157","topic_p":"mantis.png","result_p":"mantis.png"},
+            "result9":{"name":"谜一样的鹿","youarepic":"t9-type.png","namepic":"","tipspic":"","mess":"t9-result.png","info":"","btncolor":"#437536","bodybg":"topic-9-bg.jpg","bgcolor":"#6ab36e","topic_p":"deer-big.png","result_p":"deer-big.png"}
+    }
+
+    $(function(){
+
+
+        $(".swiper-slide-guide").removeClass("animate").removeClass("animated");
+        var mySwiper = new Swiper ('.pages-guide-swiper', {
+            direction: 'vertical',
+            onSlideChangeStart: function(swiper){
+                if(swiper.activeIndex==5){
+                    $(".p-arrup").hide();
+                }else{
+                    $(".p-arrup").show();
+                }
+                $(".swiper-slide-guide").addClass("animated").removeClass("animate");
+            },
+            onSlideChangeEnd: function(swiper){
+                $(".swiper-slide-guide").eq(swiper.activeIndex).removeClass("animated").addClass("animate");
+            }
+        });
+        //***预加载动画开始***//
+        var loader = new resLoader({
+            resources : [
+                'images/shareimg.jpg',
+                'images/guide/guide-1.jpg',
+                'images/guide/guide-2.jpg',
+                'images/animal/monkey-big-smile.png',
+                'images/animal/monkey-big-sad.png',
+                'images/guide/guide-monkey-line.png',
+                'images/guide/guide-2-title.png',
+                'images/guide/guide-2-info.png',
+                'images/guide/guide-3-1.jpg',
+                'images/guide/guide-3-2.jpg',
+                'images/guide/guide-3-title.png',
+                'images/guide/guide-3-info.png',
+                'images/guide/guide-4-1.jpg',
+                'images/guide/guide-4-2.jpg',
+                'images/guide/guide-4-title.png',
+                'images/guide/guide-4-info.png',
+                'images/guide/guide-5-1.jpg',
+                'images/guide/guide-5-title.png',
+                'images/guide/guide-6-1.jpg',
+                'images/guide/guide-6-info.png',
+                'images/guide/guide-6-icon.png',
+                'images/guide/guide-p1-info.png',
+                'images/topic-tips.png',
+                'images/share-tips.png',
+                'images/animal/ant-big.png',
+                'images/animal/ant-small.png',
+                'images/animal/bee-big.png',
+                'images/animal/butterfly-big.png',
+                'images/animal/deer-big.png',
+                'images/animal/hound-big.png',
+                'images/animal/leopard-big.png',
+                'images/animal/mantis.png',
+                'images/animal/whale-big.png',
+                'images/topic/t1-result.png',
+                'images/topic/t1-tbg.png',
+                'images/topic/t1-tips-ico.png',
+                'images/topic/t1-tips-text.png',
+                'images/topic/t1-title.png',
+                'images/topic/t1-type.png',
+                'images/topic/t1-type-it.png',
+                'images/topic/t2-result.png',
+                'images/topic/t2-tbg.png',
+                'images/topic/t2-tips-ico.png',
+                'images/topic/t2-tips-text.png',
+                'images/topic/t2-title.png',
+                'images/topic/t2-type.png',
+                'images/topic/t2-type-it.png',
+                'images/topic/t3-result.png',
+                'images/topic/t3-tbg.png',
+                'images/topic/t3-tips-ico.png',
+                'images/topic/t3-tips-text.png',
+                'images/topic/t3-title.png',
+                'images/topic/t3-type.png',
+                'images/topic/t3-type-it.png',
+                'images/topic/t4-result.png',
+                'images/topic/t4-tbg.png',
+                'images/topic/t4-tips-ico.png',
+                'images/topic/t4-tips-text.png',
+                'images/topic/t4-title.png',
+                'images/topic/t4-type.png',
+                'images/topic/t4-type-it.png',
+                'images/topic/t5-result.png',
+                'images/topic/t5-tbg.png',
+                'images/topic/t5-tips-ico.png',
+                'images/topic/t5-tips-text.png',
+                'images/topic/t5-title.png',
+                'images/topic/t5-type.png',
+                'images/topic/t5-type-it.png',
+                'images/topic/t6-result.png',
+                'images/topic/t6-tbg.png',
+                'images/topic/t6-tips-ico.png',
+                'images/topic/t6-tips-text.png',
+                'images/topic/t6-title.png',
+                'images/topic/t6-type.png',
+                'images/topic/t6-type-it.png',
+                'images/topic/t7-result.png',
+                'images/topic/t7-tbg.png',
+                'images/topic/t7-tips-ico.png',
+                'images/topic/t7-tips-text.png',
+                'images/topic/t7-title.png',
+                'images/topic/t7-type.png',
+                'images/topic/t7-type-it.png',
+                'images/topic/t8-result.png',
+                'images/topic/t8-tbg.png',
+                'images/topic/t8-tips-ico.png',
+                'images/topic/t8-tips-text.png',
+                'images/topic/t8-title.png',
+                'images/topic/t8-type.png',
+                'images/topic/t8-type-it.png',
+                'images/topic/t9-type.png',
+                'images/topic/t9-result.png',
+                'images/topic/t9-tbg.png',
+                'images/topic/t9-title.png',
+                'images/topic/topic-1-bg.jpg',
+                'images/topic/topic-2-bg.jpg',
+                'images/topic/topic-3-bg.jpg',
+                'images/topic/topic-4-bg.jpg',
+                'images/topic/topic-5-bg.jpg',
+                'images/topic/topic-6-bg.jpg',
+                'images/topic/topic-7-bg.jpg',
+                'images/topic/topic-7-2-bg.jpg',
+                'images/topic/topic-8-1-bg.jpg',
+                'images/topic/topic-8-2-bg.jpg',
+                'images/topic/topic-9-bg.jpg',
+                'images/topic-tips.gif'
+
+            ],
+            onStart : function(total){
+                console.log('start:'+total);
+            },
+            onProgress : function(current, total){
+                console.log(current+'/'+total);
+                var percent = current/total*100;
+                $('.progressbar').css('width', percent+'%');
+                $('.progresstext .current').text(current);
+                $('.progresstext .total').text(total);
+            },
+            onComplete : function(total){
+                $("#loadingModal").hide();
+                $("#guideModal").show();
+                mySwiper.update();
+                console.log('加载完毕:'+total+'个资源');
+            }
+        });
+
+        loader.start();
+
+
+        //做题提示
+        var tipsFlag=false;
+        if(!tipsFlag){
+            $("#topicTags").show();
+        }
+        $(".topicTipsKnowBtn").click(function(){
+            tipsFlag=true;//防止重做显示提示
+            $("#topicTags").hide();
+        })
+
+        var topicSwiper = new Swiper ('.pages-topic-swiper', {
+            direction: 'horizontal',
+            noSwiping : true,
+            noSwipingClass : 'swiper-slide-topic',
+            onSlideChangeStart: function(swiper){
+                $(".swiper-slide-topic").addClass("animated").removeClass("animate");
+            },
+            onSlideChangeEnd: function(swiper){
+                $(".swiper-slide-topic").eq(swiper.activeIndex).removeClass("animated").addClass("animate");
+            }
+        });
+
+        //扶我起来试试
+        $("#tryit").click(function(){
+            $("#topicModal").show();
+            topicSwiper.update();
+        })
+
+        //偷窥其他动物
+        var otherSwiper = new Swiper ('.pages-viewother-swiper', {
+            direction: 'horizontal',
+            onSlideChangeStart: function(swiper){
+                $(".swiper-slide-viewother").addClass("animated").removeClass("animate");
+            },
+            onSlideChangeEnd: function(swiper){
+                $(".swiper-slide-viewother").eq(swiper.activeIndex).removeClass("animated").addClass("animate");
+            },
+            nextButton: '.swiper-btn-next',
+            prevButton: '.swiper-btn-prev',
+            loop: true
+        });
+
+
+        //音乐播放控制
+        $("#audio_btn").click(function(){
+            var media = document.getElementById('myMusic');
+            if (media.paused) {
+                media.play();
+                $(this).addClass("rotate")
+            }else{
+                media.pause();
+                $(this).removeClass("rotate")
+            }
+        })
+
+        //下一题
+        $(".topic-next-btn").on("click",function(){
+            var type=$(this).attr("data-type");
+            if(type=='goNext'){
+                //是否做检测
+                topicSwiper.slideNext();
+            }else{
+             //查看结果
+                $("#topicModal").fadeOut();
+                $("#resultModal").fadeIn();
+            }
+        });
+
+        //查看建议
+        $("#resultModal").on("click",".btn-answer-suggest",function(){
+            var act=$(this).attr("data-act");
+            if(act=="viewOther"){
+                //查看其他动物
+                $("#resultModal").fadeOut();
+                $("#viewModal").fadeIn();
+                otherSwiper.update();
+                $("#suggBox").hide();
+            }
+            if(act=="viewSuggest"){
+                //查看建议
+                $("#suggBox").fadeIn();
+            }
+        });
+
+        //返回
+        $("#viewModal").on("click",".btn-answer-suggest",function(){
+            var act=$(this).attr("data-act");
+            if(act=="goBack"){
+                //返回
+                $("#resultModal").fadeIn();
+                $("#viewModal").fadeOut();
+            }
+        });
+
+        //关闭建议
+        $("#suggCloseBtn").click(function(){
+            $("#suggBox").fadeOut();
+        })
+
+        //分享
+        $("#shareBtn").click(function(){
+            $("#shareTips").fadeIn();
+        });
+
+        //关闭分享
+        $("#shareTips").click(function(){
+            $("#shareTips").fadeOut();
+        });
+
+        //重新测试
+
+        $("#redoBtn").click(function(){
+            $("#resultModal").fadeOut();
+            $("#topicModal").fadeIn();
+            topicSwiper.slideTo(0, 200, false);
+        });
+
+        //滑动选择
+        function prevent_default(e) {
+            e.preventDefault();
+        }
+        function disable_scroll() {
+            $(document).on('touchmove', prevent_default);
+        }
+        function enable_scroll() {
+            $(document).off('touchmove', prevent_default);
+        }
+        var Drags={};
+        Drags.dragtag=false;//拖动状态
+        Drags.dragstart=true;//拖动开始标志
+        Drags.datatransx=0;
+        Drags.clickable=true;
+        Drags.maxWidth=30;//拖动最大距离
+        $('.topic-list')
+                .on('touchstart mousedown',".topic-item", function(e) {
+                    Drags.clickable=true;
+                    Drags.maxWidth=parseInt($(e.currentTarget).css("left"))+10;
+                    if($(e.target).hasClass("leftopen")||$(e.target).hasClass("rightopen")){
+                        $(e.currentTarget).css('transform', 'translate3D('+0+'px,0px,0px)');     //点击还原
+                        $(e.currentTarget).attr("data-transX",0);
+                        $(e.currentTarget).removeClass("leftopen");
+                        $(e.currentTarget).removeClass("rightopen");
+                    }else{
+                        if(e.originalEvent.targetTouches){
+                            Drags.dragx=e.originalEvent.targetTouches[0].pageX;
+                            Drags.dragy=e.originalEvent.targetTouches[0].pageY;
+                        }else{
+                            Drags.dragx = e.pageX;
+                            Drags.dragy=e.pageY;
+                        }
+                        if($(e.currentTarget).attr("data-transX")){
+                            Drags.datatransx=parseInt($(e.currentTarget).attr("data-transX"));
+                        }
+                        Drags.dragtag=true;
+                        Drags.dragstart=true;
+
+                    }
+                })
+                .on('touchmove mousemove',".topic-item", function(e) {
+                    if(Drags.dragtag){
+                        $(e.currentTarget).removeClass('animatedh');
+                        $(e.currentTarget).addClass('dragstart');   //添加禁止选择
+                        var change=0;
+                        if(e.originalEvent.targetTouches){
+                            change = e.originalEvent.targetTouches[0].pageX-Drags.dragx;
+                            changey = e.originalEvent.targetTouches[0].pageY-Drags.dragy;
+                        }else{
+                            change = e.pageX-Drags.dragx;
+                            changey = e.pageY-Drags.dragy;
+                        }
+                        showswiperfbn();
+                        function showswiperfbn(){
+                            if(Math.abs(change)>20){
+                                Drags.dragstart=false;
+                                if(change<-20){
+                                    change=change+Drags.datatransx+20;
+                                }else{
+                                    change=change+Drags.datatransx-20;
+                                }
+                                //change = Math.min(Math.max(-Drags.maxWidth, change), 0);
+                                $(e.currentTarget).css('transform', 'translate3D('+change+'px,0px,0px)');
+                                $(e.currentTarget).attr("data-transX",change);
+                                disable_scroll();
+                            }
+                        }
+                        Drags.clickable=false;
+                    }
+                })
+                .on('touchend mouseup',".topic-item", function(e) {
+                    var left = parseInt($(e.currentTarget).attr("data-transX"));
+                    var new_left;
+                    if (left < -10) {
+                        new_left = -Drags.maxWidth;
+                        $(e.currentTarget).addClass('leftopen');
+                        //兄弟节点是否含有相同的选择
+
+                        $(e.currentTarget).parents("li").siblings("li").find(".leftopen").css('transform', 'translate3D('+0+'px,0px,0px)');     //点击还原
+                        $(e.currentTarget).parents("li").siblings("li").find(".leftopen").attr("data-transX",0);
+                        $(e.currentTarget).parents("li").siblings("li").find(".leftopen").removeClass("leftopen")
+                    }else if(left>10){
+                        new_left = Drags.maxWidth;
+                        $(e.currentTarget).addClass('rightopen');
+                        //兄弟节点是否含有相同的选择
+                        $(e.currentTarget).parents("li").siblings("li").find(".rightopen").css('transform', 'translate3D('+0+'px,0px,0px)');     //点击还原
+                        $(e.currentTarget).parents("li").siblings("li").find(".rightopen").attr("data-transX",0);
+                        $(e.currentTarget).parents("li").siblings("li").find(".rightopen").removeClass("rightopen")
+                    }else{
+                        new_left = 0;
+                    }
+                    $(e.currentTarget).removeClass('dragstart');
+                    $(e.currentTarget).css('transform', 'translate3D('+new_left+'px,0px,0px)');
+                    $(e.currentTarget).attr("data-transX",new_left);
+                    $(e.currentTarget).addClass('animatedh');
+                    Drags.dragtag=false;
+                    enable_scroll();
+
+                });
+    })
+
+/**微信自动播放音乐**/
+autoPlayMusic();
+function autoPlayMusic() {
+    /* 自动播放音乐效果，解决浏览器或者APP自动播放问题 */
+    function musicInBrowserHandler() {
+        musicPlay(true);
+        document.body.removeEventListener('touchstart', musicInBrowserHandler);
+    }
+    document.body.addEventListener('touchstart', musicInBrowserHandler);
+    /* 自动播放音乐效果，解决微信自动播放问题 */
+    function musicInWeixinHandler() {
+        musicPlay(true);
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            musicPlay(true);
+        }, false);
+        document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+    }
+    document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+function musicPlay(isPlay) {
+    var media = document.getElementById('myMusic');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+
+</script>
+</body>
+</html>
