@@ -614,7 +614,7 @@ html, body {
 .topic-tips{ position: absolute; bottom:-20px; text-align: center; left:0; right:0; color:#000; opacity: 0.4; font-size:12px;}
 
 #viewModal .topicStyle9{ background-image: url(../images/topic/topic-9-bg.jpg); background-color: #6ab46f;background-size: cover}
-#viewModal .answer-youare img{ max-width: 200px; max-height: 200px;}
+#viewModal .answer-youare img{ max-width:160px; max-height:160px;}
 #viewModal .answer-result{ bottom:4%;}
 
 .topic-tag{ background: rgba(0,0,0,0.8); position: fixed; left:0; top:0; bottom:0; right:0; text-align: center; z-index: 500}
