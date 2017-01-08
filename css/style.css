@@ -318,7 +318,7 @@ html, body {
     transform:translate(0,30px);-webkit-transform:translate(0,30px);
 }
 
-.p5-s-title{ position: absolute; z-index: 10; width:59%;left:21%; top:30%;-webkit-transition: all 0.5s ease-in 0s;
+.p5-s-title{ position: absolute; z-index: 10; width:80%;left:10%; text-align: center; top:30%;-webkit-transition: all 0.5s ease-in 0s;
     -moz-transition: all 0.5s ease-in 0s;
     -o-transition: all 0.5s ease-in 0s;
     transition: all 0.5s ease-in 0s;}
@@ -478,7 +478,7 @@ html, body {
 
 
 .topic-title{  margin-top:10%; text-align: center;}
-.topic-title img{max-width: 80%; max-height:60px;}
+.topic-title img{max-width: 88%; max-height:80px;}
 .topic-animal{ position: absolute; z-index: 100; bottom:55px; left:10px;}
 .topic-animal img{ max-width:180px; max-height: 180px;}
 .topic-next-btn{ position: absolute; left:0; right:0; bottom:0;  display: block; padding:20px 0; text-align: center; border-radius: 120px; background: rgba(0,0,0,0.3);}
@@ -500,38 +500,38 @@ html, body {
 /**题目样式**/
 .topicStyle1{ background-image: url(../images/topic/topic-1-bg.jpg); background-color: #92aca1;background-size: cover}
 .topicStyle1 .topic-tmbg{ background-image: url(../images/topic/t1-tbg.png)}
-.topicStyle1 .topic-next-btn{ background: #9c1f24}
-.topicStyle1 .topic-item{  border-color:#ab4649; background:#e16662;}
-.topicStyle1 .linebg{ background: #ab4649;}
-.topicStyle1 .linebg:before,.topicStyle1 .linebg:after{ background:#f78d1f;border-color:#ab4649;}
+.topicStyle1 .topic-next-btn{ background: #d83a51}
+.topicStyle1 .topic-item{  border-color:#d83a51; background:#ec6554;}
+.topicStyle1 .linebg{ background: #d83a51;}
+.topicStyle1 .linebg:before,.topicStyle1 .linebg:after{ background:#ec6554;border-color:#d83a51;}
 
-.topicStyle2{ background-image: url(../images/topic/topic-2-bg.jpg); background-color: #394a61;background-size: cover}
+.topicStyle2{ background-image: url(../images/topic/topic-2-bg.jpg); background-color: #4b5461;background-size: cover}
 .topicStyle2 .topic-tmbg{ background-image: url(../images/topic/t2-tbg.png)}
-.topicStyle2 .topic-next-btn{ background: #1a1210}
-.topicStyle2 .topic-item{  border-color:#1a1210; background:#b7b7b7;}
+.topicStyle2 .topic-next-btn{ background: #1e1816}
+.topicStyle2 .topic-item{  border-color:#1e1816; background:#414041;}
 .topicStyle2 .linebg{ background: #1a1210;}
-.topicStyle2 .linebg:before,.topicStyle2 .linebg:after{ background:#b7b7b7;border-color:#1a1210;}
+.topicStyle2 .linebg:before,.topicStyle2 .linebg:after{ background:#414041;border-color:#1e1816;}
 .topicStyle2 .topic-animal{ bottom:40px;}
 
 .topicStyle3{ background-image: url(../images/topic/topic-3-bg.jpg); background-color: #d67224;background-size: cover}
 .topicStyle3 .topic-tmbg{ background-image: url(../images/topic/t3-tbg.png)}
-.topicStyle3 .topic-next-btn{ background: #bc8322}
-.topicStyle3 .topic-item{  border-color:#ba580f; background:#f9c67d;}
-.topicStyle3 .linebg{ background: #bc8322;}
-.topicStyle3 .linebg:before,.topicStyle3 .linebg:after{ background:#f9c67d;border-color:#ba580f;}
+.topicStyle3 .topic-next-btn{ background: #ed5f39}
+.topicStyle3 .topic-item{  border-color:#ed5f39; background:#f4a815;}
+.topicStyle3 .linebg{ background: #ed5f39;}
+.topicStyle3 .linebg:before,.topicStyle3 .linebg:after{ background:#f4a815;border-color:#ed5f39;}
 .topicStyle3 .topic-animal{ bottom:40px;}
 
 .topicStyle4{ background-image: url(../images/topic/topic-4-bg.jpg); background-color: #4ab2ba;background-size: cover}
 .topicStyle4 .topic-tmbg{ background-image: url(../images/topic/t4-tbg.png)}
-.topicStyle4 .topic-next-btn{ background: #3456a5}
-.topicStyle4 .topic-item{  border-color:#3456a5; background:#69c1e8;}
-.topicStyle4 .linebg{ background: #3456a5;}
-.topicStyle4 .linebg:before,.topicStyle4 .linebg:after{ background:#69c1e8;border-color:#3456a5;}
+.topicStyle4 .topic-next-btn{ background: #399ad2}
+.topicStyle4 .topic-item{  border-color:#477396; background:#399ad2;}
+.topicStyle4 .linebg{ background: #477396;}
+.topicStyle4 .linebg:before,.topicStyle4 .linebg:after{ background:#399ad2;border-color:#477396;}
 .topicStyle4 .topic-animal{ bottom:40px;}
 
 .topicStyle5{ background-image: url(../images/topic/topic-5-bg.jpg); background-color: #000000;background-size: cover}
 .topicStyle5 .topic-tmbg{ background-image: url(../images/topic/t5-tbg.png)}
-.topicStyle5 .topic-next-btn{ background: #4a3791}
+.topicStyle5 .topic-next-btn{ background: #835da1}
 .topicStyle5 .topic-item{  border-color:#673b72; background:#b09fe2;}
 .topicStyle5 .linebg{ background: #673b72;}
 .topicStyle5 .linebg:before,.topicStyle5 .linebg:after{ background:#b09fe2;border-color:#673b72;}
@@ -539,34 +539,34 @@ html, body {
 
 .topicStyle6{ background-image: url(../images/topic/topic-6-bg.jpg); background-color: #9a9309;background-size: cover}
 .topicStyle6 .topic-tmbg{ background-image: url(../images/topic/t6-tbg.png)}
-.topicStyle6 .topic-next-btn{ background: #694940}
-.topicStyle6 .topic-item{  border-color:#694940; background:#e0b27c;}
+.topicStyle6 .topic-next-btn{ background: #8a6149}
+.topicStyle6 .topic-item{  border-color:#694940; background:#c1774d;}
 .topicStyle6 .linebg{ background: #673b72;}
-.topicStyle6 .linebg:before,.topicStyle6 .linebg:after{ background:#e0b27c;border-color:#673b72;}
+.topicStyle6 .linebg:before,.topicStyle6 .linebg:after{ background:#c1774d;border-color:#673b72;}
 .topicStyle6 .topic-animal{ bottom:50px;}
 
 .topicStyle7{ background-image: url(../images/topic/topic-7-2-bg.jpg); background-color: #c0ca33;background-size: cover}
 .topicStyle7 .topic-tmbg{ background-image: url(../images/topic/t7-tbg.png)}
-.topicStyle7 .topic-next-btn{ background: #b8ae15}
-.topicStyle7 .topic-item{  border-color:#b8ae15; background:#d8c727;}
-.topicStyle7 .linebg{ background: #b8ae15;}
-.topicStyle7 .linebg:before,.topicStyle7 .linebg:after{ background:#d8c727;border-color:#b8ae15;}
+.topicStyle7 .topic-next-btn{ background: #f29e0a}
+.topicStyle7 .topic-item{  border-color:#f4a815; background:#f7ba50;}
+.topicStyle7 .linebg{ background: #f4a815;}
+.topicStyle7 .linebg:before,.topicStyle7 .linebg:after{ background:#f7ba50;border-color:#f4a815;}
 .topicStyle7 .topic-animal{ bottom:40px;}
 
 .topicStyle8{ background-image: url(../images/topic/topic-8-1-bg.jpg); background-color: #8fc551;background-size: cover}
 .topicStyle8 .topic-tmbg{ background-image: url(../images/topic/t8-tbg.png)}
-.topicStyle8 .topic-next-btn{ background: #437536}
-.topicStyle8 .topic-item{  border-color:#437536; background:#b6d864;}
-.topicStyle8 .linebg{ background: #b6d864;}
-.topicStyle8 .linebg:before,.topicStyle8 .linebg:after{ background:#b6d864;border-color:#437536;}
+.topicStyle8 .topic-next-btn{ background: #72a83f}
+.topicStyle8 .topic-item{  border-color:#72a83f; background:#abd371;}
+.topicStyle8 .linebg{ background: #72a83f;}
+.topicStyle8 .linebg:before,.topicStyle8 .linebg:after{ background:#abd371;border-color:#72a83f;}
 .topicStyle8 .topic-animal{ bottom:40px;}
 
 .topicStyle9{ background-image: url(../images/topic/topic-8-1-bg.jpg); background-color: #8fc551;background-size: cover}
 .topicStyle9 .topic-tmbg{ background-image: url(../images/topic/t9-tbg.png)}
-.topicStyle9 .topic-next-btn{ background: #437536}
-.topicStyle9 .topic-item{  border-color:#437536; background:#b6d864;}
-.topicStyle9 .linebg{ background: #b6d864;}
-.topicStyle9 .linebg:before,.topicStyle9 .linebg:after{ background:#b6d864;border-color:#437536;}
+.topicStyle9 .topic-next-btn{ background: #72a83f}
+.topicStyle9 .topic-item{  border-color:#72a83f; background:#abd371;}
+.topicStyle9 .linebg{ background: #72a83f;}
+.topicStyle9 .linebg:before,.topicStyle9 .linebg:after{ background:#abd371;border-color:#72a83f;}
 .topicStyle9 .topic-animal{ bottom:40px;}
 
 .topic-question{ position: relative;  width: 80%;  margin: 6% 10%;  box-sizing: border-box;}
@@ -593,25 +593,29 @@ html, body {
 .answer-info img{ max-width:100%;}
 .suggest-info{ margin:0 6px; margin-top:-20px; }
 .btn-answer-suggest{ background: #e16662; padding:10px 0; display: block; box-sizing: border-box; height:52px;border-radius: 30px; margin-top:-40px; width:100%;}
-.btn-answer-suggest img{ max-height:25px; }
+.btn-answer-suggest img{ max-height:25px; max-width: 90%; }
 .btn-answer-suggest:active,.btn-answer-suggest:hover{ background: #d44e49}
 .answer-sugget-btnbox{ position: absolute; bottom:3%;  padding:10px; left:0; right:0;}
 .btn-sugget{ display: block; padding:15px 0; width:46%; margin:10px 2%; text-align: center; border-radius: 120px; background: rgba(0,0,0,0.4); float:left;}
 .btn-sugget img{ max-height: 25px; max-width: 100%;}
 .btn-sugget:active,.btn-sugget:hover{  background: rgba(0,0,0,0.5);}
 
-.topicStyle1 .btn-answer-suggest{ background: #9c1f24;}
-.topicStyle2 .btn-answer-suggest{ background: #1a1210;}
-.topicStyle3 .btn-answer-suggest{ background: #bc8322;}
-.topicStyle4 .btn-answer-suggest{ background: #3456a5;}
-.topicStyle5 .btn-answer-suggest{ background: #4a3791;}
-.topicStyle6 .btn-answer-suggest{ background: #694940;}
-.topicStyle7 .btn-answer-suggest{ background: #b8ae15;}
-.topicStyle8 .btn-answer-suggest{ background: #437536;}
+.topicStyle1 .btn-answer-suggest{ background: #d83a51;}
+.topicStyle2 .btn-answer-suggest{ background: #1e1816;}
+.topicStyle3 .btn-answer-suggest{ background: #ed5f39;}
+.topicStyle4 .btn-answer-suggest{ background: #399ad2;}
+.topicStyle5 .btn-answer-suggest{ background: #835da1;}
+.topicStyle6 .btn-answer-suggest{ background: #8a6149;}
+.topicStyle7 .btn-answer-suggest{ background: #f29e0a;}
+.topicStyle8 .btn-answer-suggest{ background: #72a83f;}
 .topicStyle9 .btn-answer-suggest{ background: #5da88b;}
 
 .resultBox .topicStyle9{ background-image: url(../images/topic/topic-9-bg.jpg); background-color: #6ab46f;background-size: cover}
 .topic-tips{ position: absolute; bottom:-20px; text-align: center; left:0; right:0; color:#000; opacity: 0.4; font-size:12px;}
+
+#viewModal .topicStyle9{ background-image: url(../images/topic/topic-9-bg.jpg); background-color: #6ab46f;background-size: cover}
+#viewModal .answer-youare img{ max-width: 200px; max-height: 200px;}
+#viewModal .answer-result{ bottom:4%;}
 
 .topic-tag{ background: rgba(0,0,0,0.8); position: fixed; left:0; top:0; bottom:0; right:0; text-align: center; z-index: 500}
 .topic-tag-img{ width:80%; max-width:600px; margin:10% auto; text-align: center}
