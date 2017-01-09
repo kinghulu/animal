@@ -561,19 +561,19 @@ html, body {
 .topicStyle8 .linebg:before,.topicStyle8 .linebg:after{ background:#abd371;border-color:#72a83f;}
 .topicStyle8 .topic-animal{ bottom:40px;}
 
-.topicStyle9{ background-image: url(../images/topic/topic-8-1-bg.jpg); background-color: #8fc551;background-size: cover}
+.topicStyle9{ background-image: url(../images/topic/topic-9-bg.jpg); background-color: #90c3ac;background-size: cover}
 .topicStyle9 .topic-tmbg{ background-image: url(../images/topic/t9-tbg.png)}
-.topicStyle9 .topic-next-btn{ background: #72a83f}
-.topicStyle9 .topic-item{  border-color:#72a83f; background:#abd371;}
-.topicStyle9 .linebg{ background: #72a83f;}
-.topicStyle9 .linebg:before,.topicStyle9 .linebg:after{ background:#abd371;border-color:#72a83f;}
+.topicStyle9 .topic-next-btn{ background: #398f6c}
+.topicStyle9 .topic-item{  border-color:#5f9e92; background:#90c3ac;}
+.topicStyle9 .linebg{ background: #5f9e92;}
+.topicStyle9 .linebg:before,.topicStyle9 .linebg:after{ background:#90c3ac;border-color:#5f9e92;}
 .topicStyle9 .topic-animal{ bottom:40px;}
 
 .topic-question{ position: relative;  width: 80%;  margin: 6% 10%;  box-sizing: border-box;}
 .topic-question li{ position: relative; padding:5px; padding-left:20%;}
 .question-title{ position: absolute; left:0;  top:50%; height:20px; margin-top:-10px;}
 .question-title img{ max-height:20px; max-width: 100%}
-.question-select{ height:48px; position: relative;  width:100%; border:2px solid #437536; border-radius: 25px; background:url(../images/select-arr.png) no-repeat #b6d864; background-position: 90% center; background-size:16px auto; }
+.question-select{ height:48px; position: relative;  width:100%; border:2px solid #5f9e92; border-radius: 25px; background:url(../images/select-arr.png) no-repeat #90c3ac; background-position: 90% center; background-size:16px auto; }
 .question-select select{ width:100%; display: block; height:48px; background: none; border:none; line-height:48px; border-radius: 25px; color:#fff; text-align: center; padding-left:10%; box-sizing: border-box; font-size:20px; font-family:"Microsoft Yahei",Helvetica;}
 .question-select select option{color:#000000}
 
