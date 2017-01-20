@@ -69,7 +69,11 @@
             <div class="swiper-slide swiper-slide-guide page-box">
                 <div class="fullbg  guide-p6-box" style="background-image:url(images/guide/guide-5-1.jpg)">
                     <div class="guide-p6-text"><img src="images/guide/guide-6-info.png"></div>
-                    <div class="guide-p6-instro"><img src="images/guide/guide-6-instro.png"></div>
+                    <div class="guide-p6-instro">
+                        <img src="images/guide/guide-p6-circle.png" class="p6-circle" />
+                        <img src="images/guide/arrow.png" class="p6-arr">
+                        <img src="images/guide/guide-6-logo.png" class="p6-logo" />
+                    </div>
                 </div>
 
                 <div class="guide-p6-btn" id="tryit">扶我起来试试</div>
@@ -633,10 +637,10 @@
 
             ],
             onStart : function(total){
-                console.log('start:'+total);
+                //console.log('start:'+total);
             },
             onProgress : function(current, total){
-                console.log(current+'/'+total);
+                //console.log(current+'/'+total);
                 var percent = current/total*100;
                 $('.progressbar').css('width', percent+'%');
                 $('.progresstext .current').text(current);
@@ -646,7 +650,7 @@
                 $("#loadingModal").hide();
                 $("#guideModal").show();
                 mySwiper.update();
-                console.log('加载完毕:'+total+'个资源');
+               // console.log('加载完毕:'+total+'个资源');
             }
         });
 

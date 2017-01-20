@@ -309,11 +309,27 @@ html, body {
     transform:translate(0,-30px);-webkit-transform:translate(0,-30px);
 }
 .guide-p6-text img{ max-width:85%;}
-.guide-p6-instro{ text-align: center; padding-top:20px;-webkit-transition: all 0.5s ease-in 0s;
+.guide-p6-instro{ text-align: center; position: relative; padding-top:20px;-webkit-transition: all 0.5s ease-in 0s;
     -moz-transition: all 0.5s ease-in 0s;
     -o-transition: all 0.5s ease-in 0s;
     transition: all 0.5s ease-in 0s;}
-.guide-p6-instro img{ max-width:90%;}
+.guide-p6-instro img{ max-width:100%; position: absolute; width:100%; left:0; top:0; right:0; z-index: 1;}
+.guide-p6-instro .p6-arr{ z-index: 2; -webkit-animation:14s infinite linear; -webkit-animation-name: circle-arr;-moz-animation:14s infinite linear; -moz-animation-name: circle-arr; animation:14s infinite linear; animation-name: circle-arr;}
+.guide-p6-instro .p6-logo{ z-index: 3;}
+
+@-webkit-keyframes circle-arr{
+    0%{-webkit-transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(360deg)}
+}
+@-moz-keyframes circle-arr{
+    0%{-moz-transform:rotate(0deg)}
+    100%{-moz-transform:rotate(360deg)}
+}
+@keyframes circle-arr{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+
 .animated .guide-p6-instro{
     transform:translate(0,30px);-webkit-transform:translate(0,30px);
 }
